@@ -26,8 +26,6 @@ SECRET_KEY = "django-insecure-%@g$z_ata7c1cbcnwfyjum)qne*9q&p9np5fje6(@xzcvnhgso
 DEBUG = True
 
 ALLOWED_HOSTS = []
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
 
 
 # Application definition
@@ -39,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "todo",
 ]
 
 MIDDLEWARE = [
@@ -55,15 +54,15 @@ ROOT_URLCONF = "todo_list.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates' ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / "templates"],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
@@ -102,6 +101,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+STATIC_URL = "static/"
+STATICFILES_DIRS = [BASE_DIR / "static"]
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
