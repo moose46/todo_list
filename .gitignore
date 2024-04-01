@@ -6,3 +6,7 @@ todo_list/todo_list/__pycache__/
 
 todo_list/todo/migrations/
 
+todo_list/users/__pycache__/
+
+todo_list/users/migrations/
+
