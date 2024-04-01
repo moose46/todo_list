@@ -36,3 +36,12 @@ class RegisterView(FormView):
             login(self.request, user)
         
         return super(RegisterView, self).form_valid(form)
+    
+from django.contrib.auth.views import LogoutView
+# https://github.com/encode/django-rest-framework/issues/9206
+class PatchLogoutView(LogoutView):
+    http_method_names = ["get", "post", "options"]
+
+    def get(self, request, *args, **kwargs):
+        return self.post(request, *args, **kwargs)
+    
