@@ -10,3 +10,8 @@ todo_list/users/__pycache__/
 
 todo_list/users/migrations/
 
+.env
+db.sqlite3
+
+/todo_list/db.sqlite3
+todo_list/db.sqlite3
